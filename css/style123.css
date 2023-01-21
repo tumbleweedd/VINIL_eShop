@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    background: #413F3C;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*Псевдоэлемент, являющийся последним потомком ul*/
+nav ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a {
+    /*убираем подчёркивание у ссылку*/
+    text-decoration: none;
+    display: block;
+    transition: .3s linear;
+}
+
+.topmenu > li {
+    /*прижимаем к левой стороне родителя*/
+    float: left;
+    /*сдвигаем элемент относительно его обычного положения*/
+    position: relative;
+    border-left: 1px solid black;
+}
+
+.topmenu > li:first-child {
+    border-left: 0;
+}
+
+.topmenu > li > a {
+    padding: 20px 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #FEFDFD;
+    /*межбуквенное расстояние*/
+    letter-spacing: 2px;
+}
+
+.topmenu > li > a,
+.submenu a:hover {
+    color: #ddbe86;
+}
+
+.topmenu .fa,
+.submenu .fa {
+    margin-left: 5px;
+    color: inherit;
+}
+
+.submenu {
+    position: absolute;
+    /*определение порядка расположение элементов друг на дружке*/
+    z-index: 5;
+    min-width: 200px;
+    background: white;
+    border-top: 1px solid #CBCBCC;
+    border-left: 1px solid #CBCBCC;
+    border-right: 1px solid #CBCBCC;
+    visibility: hidden;
+    /*прозрачность*/
+    opacity: 0;
+    /*устанавливает координаты точки, относительно которой будет происходить трансформация элемента*/
+    transform-origin: 0% 0%;
+    /*трансформации позволяют сдвигать, поворачивать и масштабировать элементы*/
+    transform: rotateX(-90deg);
+    /*Transition позволяет определять переходное состояние между двумя состояниями элемента*/
+    transition: .3s linear;
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li a {
+    color: #282828;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-bottom: 1px solid #CBCBCC;
+}
+
+.submenu .submenu {
+    position: absolute;
+    left: 100%;
+    top: -1px;
+    transition: .3s linear;
+}
+
+nav li:hover > .submenu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+}
+
+
+body {
+    background-color: #e3dac8;
+    font-family: sans-serif;
+
+}
+
+.footer {
+    margin-top: 50px;
+    height: auto;
+    background-color: #333333;
+}
+
+.desc_h5 h3 {
+    color: #78776f;
+}
+
+.desc_words {
+    margin-top: 50px;
+    margin-left: 750px;
+
+}
+
+.desc_words2 {
+    margin-top: 50px;
+    margin-left: 220px;
+    float: left;
+
+}
+
+.desc_words3 h1 {
+    margin-top: 200px;
+    margin-left: 1000px;
+
+}
+
+
+.desc_words2 p {
+    font-size: 40px;
+    color: #e3dac8;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+    float: left;
+
+}
+
+
+.down_h5 {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.value p {
+    font-size: 40px;
+    color: #e3dac8;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+    margin-top: 100px;
+    margin-left: 750px;
+
+}
+
+.desc_h5 {
+    margin-left: 750px;
+    margin-top: 120px;
+}
+
+#btn {
+    margin-left: 50px;
+    margin-top: 25px;
+    color: #fff;
+    background: rgb(0, 0, 0); /* фон кнопки */
+    padding: .7em 3em; /* отступ от текста */
+    outline: none; /* убирать контур */
+}
+
+#btn:hover {
+    background: #303028;
+}
+
+#btn:active {
+    background: black;
+}
+
+.image {
+    margin-top: 40px;
+    margin-left: 100px;
+    height: 600px;
+    width: 600px;
+    border: 0px;
+}
+
+.desc_img {
+    float: left;
+}
+
+.image2 {
+    margin-top: 40px;
+    margin-left: 150px;
+    height: 450px;
+    width: 450px;
+    border: 0px;
+
+
+}
+
+.desc_words2 h5 {
+    color: #f03a46;
+    text-decoration: underline;
+    font-size: 19px;
+    margin-left: 0px;
+    margin-top: 70px;
+}
+
+.desc_words3 h5 {
+    color: #f03a46;
+    text-decoration: underline;
+    font-size: 19px;
+    margin-top: 30px;
+    margin-left: 1000px;
+
+}
+
+.image3 {
+    margin-top: 40px;
+    margin-left: 320px;
+    height: 450px;
+    width: 450px;
+    border: 0px;
+
+
+}
+
+.navbar {
+    /*определяет, необходимо ли для переполненного блочного элемента содержимое скрыть*/
+    overflow: hidden;
+    background-color: #e3dac8;
+    height: 60px;
+}
+
+.navbar a {
+    float: right;
+    color: #1f1d1b;
+    font-size: 13px;
+    padding: 15px;
+    text-decoration: none;
+    font-family: arial black, serif;
+}
+
+.vinil {
+    float: left;
+    color: #1f1d1b;
+    padding: 15px;
+    text-decoration: none;
+    font-family: arial black, serif;
+}
+
+.vinil a {
+    font-size: 18px;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: #f03a46;
+    font-size: 13px;
+    padding: 15px;
+    background-color: inherit;
+    font-family: arial black, serif;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #f5eee1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #e5d5b3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.widget {
+    padding: 20px 30px;
+    background: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.widget-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-left: 2px solid #b99d61;
+}
+
+.widget-list {
+    padding: 0;
+    list-style: none;
+}
+
+.widget-list a:before {
+    /*content заменяет элемент сгенерированным значением*/
+    content: "\2014";
+    margin-right: 14px;
+}
+
+.widget-list a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    padding: 6px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #444;
+    transition: .3s linear;
+}
+
+.widget-list a:hover {
+    color: #b99d61;
+}
+
+.topmenu a {
+    text-decoration: none;
+    display: block;
+    transition: .4s ease-in-out;
+}
+
+.dropdown > li > a {
+    padding: 20px;
+    color: #1f1d1b;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: arial black, serif;
+}
+
+.dropdown li a:hover {
+    color: #1f1d1b;
+}
+
+.dropdown-content li a {
+    border-bottom: 1px solid #efefef;
+    font-size: 13px;
+    color: #1f1d1b;
+    font-family: arial black, serif;
+}
+
+
+footer {
+    align-items: center;
+    background-color: #262626;
+    bottom: 0;
+    color: #666666;
+    display: flex;
+    font-size: 5em;
+    height: 400px;
+    /*определяет, как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера*/
+    justify-content: center;
+    position: fixed;
+    /*Управляет преобразованием текста элемента в заглавные или прописные символы*/
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 1;
+}
+
+/**
+ * Переключаемая боковая панель навигации
+ * выдвигающаяся по клику слева
+ */
+/*НЕ ИСПОЛЬЗВУЕТСЯ*/
+/*.nav {*/
+/*    !*  ширна произвольная *!*/
+/*    width: 320px;*/
+/*    min-width: 320px;*/
+/*    !* фиксируем и выставляем высоту панели на максимум *!*/
+/*    height: 100%;*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    margin: 0;*/
+/*    !* сдвигаем (прячем) панель относительно левого края страницы *!*/
+/*    left: -320px;*/
+/*    !* внутренние отступы *!*/
+/*    padding: 15px 20px;*/
+/*    !* плавный переход смещения панели *!*/
+/*    -webkit-transition: left 0.3s;*/
+/*    -moz-transition: left 0.3s;*/
+/*    transition: left 0.3s;*/
+/*    !* определяем цвет фона панели *!*/
+/*    background: #e3dac8;*/
+/*    !* поверх других элементов *!*/
+/*    z-index: 2000;*/
+/*}*/
+
+.sl-container {
+    width: 100%;
+    height: 500px;
+    margin: 20px 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #000;
+    position: relative;
+}
+
+.swipe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    overflow: hidden;
+}
+
+.panel {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.left {
+    left: -100%;
+}
+
+.right {
+    left: 100%;
+}
+
+.sl-info {
+    position: absolute;
+    width: 70%;
+    max-width: 500px;
+    bottom: 15%;
+    right: 5%;
+    pointer-events: none;
+}
+
+.inner {
+    position: relative;
+    padding: 0.5em 2em 1em;
+    background: #FFFFFF;
+    /*добавляет тень к элементу*/
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.inner h3 {
+    font-size: 1.7em;
+    font-weight: normal;
+    color: #337AB7;
+}
+
+#mini-cart {
+    margin-left: 1420px;
+    font-size: 20px;
+    color: #e3dac8;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+    float: left;
+}
+
+#f {
+    margin-left: 1420px;
+    font-size: 20px;
+    color: #e3dac8;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+    float: left;
+}
+
+.logout {
+    margin-left: 1420px;
+    font-size: 20px;
+    color: #e3dac8;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+    float: left;
+}
+
+.inner p {
+    font-family: Verdana, sans-serif;
+}
+
+.sl-info:before {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    /*позволяет вам поворачивать, масштабировать, наклонять или сдвигать элемент*/
+    transform: translate(-10px, -10px);
+    background: #337AB7;
+}
+
+.sl-buttons {
+    position: absolute;
+    bottom: -50px;
+    right: 5%;
+    pointer-events: all;
+}
+
+.sl-buttons button {
+    transition: ease .4s;
+}
+
+.sl-buttons button svg {
+    margin: 10px 0;
+}
+
+.sl-buttons .btn-prev,
+.sl-buttons .btn-next {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    border: 2px solid #337AB7;
+    outline: none;
+    border-radius: 60px;
+    color: #FFFFFF;
+    background: #337AB7;
+    box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, .5);
+    /*Устанавливает форму курсора, когда он находится в пределах элемента*/
+    cursor: pointer;
+}
+
+.sl-buttons button:hover {
+    box-shadow: 0px 3px 30px 3px rgba(0, 0, 0, .5);
+}
+
+.sl-buttons button:disabled {
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .5);
+    background: #BFE2FF;
+    cursor: default;
+}
+
+.optional {
+    width: 80%;
+    max-width: 680px;
+    margin: 6em auto;
+    padding: 2em 3em;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16),
+    0 3px 12px rgba(0, 0, 0, 0.23);
+}
+
+@media (max-width: 620px) {
+    body {
+        font-size: 13px;
+        line-height: 1.5em;
+    }
+
+    .sl-info {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        bottom: 0;
+        right: 0;
+    }
+
+    .inner {
+        padding: .5em 1.5em;
+        box-shadow: none;
+    }
+
+    .sl-buttons {
+        display: none;
+    }
+}
+
+/*@media only screen and (max-width: 850px) and (min-width: 450px) {*/
+/*    #slider_bl .slider-wrapper {*/
+/*        border-radius: 0*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (max-width: 450px) {*/
+/*    #slider_bl .slider-wrapper {*/
+/*        border-radius: 0*/
+/*    }*/
+
+/*    #slider_bl .slider-wrapper .info {*/
+/*        opacity: 0*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (min-width: 850px) {*/
+/*    #slider_bl body {*/
+/*        padding: 0 80px*/
+/*    }*/
+/*}*/
+
+
+
+.product-item {
+    display: inline-grid;
+    width: 300px;
+    text-align: center;
+    margin: 10px 100px auto;
+    border-bottom: 2px solid #F5F5F5;
+    background: white;
+    font-family: "Open Sans";
+    /*Задаёт переход*/
+    transition: .3s ease-in;
+}
+
+.product-item:hover {
+    border-bottom: 2px solid #fc5a5a;
+}
+
+.product-item img {
+    display: block;
+    width: 100%;
+}
+
+.product-list {
+    background: #fafafa;
+    padding: 15px 0;
+}
+
+.product-list h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #444444;
+    margin: 0 0 10px 0;
+}
+
+.price {
+    font-size: 16px;
+    color: #fc5a5a;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.button-main-page {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 12px;
+    background: #cccccc;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 28px;
+    transition: .3s ease-in;
+}
+
+.product-item:hover .button {
+    background: #fc5a5a;
+}
+
+.footer {
+    margin-top: 50px;
+    height: auto;
+    background-color: #333333;
+}
+
+.info p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 70%;
+    font-size: 20px;
+    color: #e3dac8;
+    text-shadow: 1px 0 1px #000000, 0 1px 1px #000000, -1px 0 1px #000000, 0 -1px 1px #000000;
+}
+
+.label p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 20%;
+    font-size: 20px;
+    color: #e3dac8;
+    text-shadow: 1px 0 1px #000000, 0 1px 1px #000000, -1px 0 1px #000000, 0 -1px 1px #000000;
+    float: left;
+}

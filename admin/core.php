@@ -1,0 +1,26 @@
+<?php
+$action = $_POST['action'];
+
+require_once 'function.php';
+
+// Выбираем функцию из function.php
+switch ($action) {
+    case 'init':
+        init();
+        break;
+    case "selectOneGoods":
+        selectOneGoods();
+        break;
+    case "updateGoods":
+        updateGoods();
+        break;
+    case "newGoods":
+        newGoods();
+        break;
+    case"loadG":
+        loadG();
+        break;
+    case"loadSingleGoods":
+        loadSingleGoods();
+        break;
+}

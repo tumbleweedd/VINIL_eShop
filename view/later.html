@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Пример dropdown</title>
+    <link rel="stylesheet" href="../css/style123.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <h2 class="logo">
+            <div class="vinil">
+                <a href="#">VINIL</a>
+            </div>
+        </h2>
+    </nav>
+</div>
+<div class="navbar">
+    <a href="#">аксессуары</a>
+    <a href="#">классика</a>
+    <div class="dropdown">
+        <button class="dropbtn">коллекция</button>
+        <div class="dropdown-content">
+            <a href="#">ссылка 1</a>
+            <a href="#">ссылка 2</a>
+            <a href="#">ссылка 3</a>
+        </div>
+    </div>
+    <a href="#">главная</a>
+</div>
+
+<section id="slider_bl">
+    <div class="wrapper">
+        <input checked type=radio name="slider" id="slide1"/>
+        <input type=radio name="slider" id="slide2"/>
+        <input type=radio name="slider" id="slide3"/>
+        <input type=radio name="slider" id="slide4"/>
+        <input type=radio name="slider" id="slide5"/>
+        <div class="slider-wrapper">
+            <div class=inner>
+                <article>
+
+                    <a href="../index.php"> <img class="slider_img" src="../images/2.webp"/></a>
+                </article>
+                <article>
+
+                    <a href="royal_blood.html"> <img class="slider_img" src="../images/3.webp"/></a>
+                </article>
+                <article>
+
+                    <img class="slider_img" src="../images/7.jfif"/>
+                </article>
+                <article>
+
+                    <img class="slider_img" src="../images/5.webp"/>
+                </article>
+                <article>
+
+                    <a href="rhcp.html"> <img class="slider_img" src="../images/4.webp"/></a>
+                </article>
+            </div>
+        </div>
+        <div class="slider-prev-next-control">
+            <label for=slide1></label>
+            <label for=slide2></label>
+            <label for=slide3></label>
+            <label for=slide4></label>
+            <label for=slide5></label>
+
+        </div>
+        <div class="slider-dot-control">
+            <label for=slide1></label>
+            <label for=slide2></label>
+            <label for=slide3></label>
+            <label for=slide4></label>
+            <label for=slide5></label>
+
+        </div>
+    </div>
+</section>
+
+<!--<div class="product-item">-->
+<!--    <a href="index.php"><img src="images/2.webp"></a>-->
+<!--    <div class="product-list">-->
+<!--        <h3>Daft Punk</h3>-->
+<!--        <span class="price">₽ 4912</span>-->
+<!--        <a href="" class="button-main-page">В корзину</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="product-item">-->
+<!--    <a href="royal_blood.html"><img src="images/3.webp"></a>-->
+<!--    <div class="product-list">-->
+<!--        <h3>Red Hot Chili Peppers</h3>-->
+<!--        <span class="price">₽ 1999</span>-->
+<!--        <a href="" class="button-main-page">В корзину</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="product-item">-->
+<!--    <img src="images/7.jfif">-->
+<!--    <div class="product-list">-->
+<!--        <h3>POLARIS</h3>-->
+<!--        <span class="price">₽ 1999</span>-->
+<!--        <a href="" class="button-main-page">В корзину</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="product-item">-->
+<!--    <a href="rhcp.html"> <img src="images/4.webp"></a>-->
+<!--    <div class="product-list">-->
+<!--        <h3>Royal Blood</h3>-->
+<!--        <span class="price">₽ 5999</span>-->
+<!--        <a href="" class="button-main-page">В корзину</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="product-item">-->
+<!--    <img src="images/5.webp">-->
+<!--    <div class="product-list">-->
+<!--        <h3>Монеточка</h3>-->
+<!--        <span class="price">₽ 1999</span>-->
+<!--        <a href="" class="button-main-page">В корзину</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="product-item">-->
+<!--    <a href="royal_blood.html"><img src="images/8.jfif"></a>-->
+<!--    <div class="product-list">-->
+<!--        <h3>MGK</h3>-->
+<!--        <span class="price">₽ 1999</span>-->
+<!--        <a href="" class="button-main-page">В корзину</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--<div id="mini-cart"></div>-->
+<!--<a href="later.html">Желания</a>-->
+<div id="goods"></div>
+<div class="footer">
+    <div class="label">
+        <p>VINIL</p>
+    </div>
+    <div class="info">
+        <p>molodkin.98@mail.ru</p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="../js/eshop.js"></script>
+<script src="../js/later.js"></script>
+
+</body>
+</html>
